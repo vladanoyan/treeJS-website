@@ -1,0 +1,194 @@
+// fonts
+@font-face {
+  font-family: 'SF Pro Display', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  src: local('SF Pro Display'), url('../fonts/SF-Pro-Display-Regular.woff') format('woff');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+@font-face {
+  font-family: 'SF Pro Display 700';
+  font-style: normal;
+  font-weight: 700;
+  src: local('SF Pro Display'), url('../fonts/SF-Pro-Display-Bold.woff') format('woff');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+// fonts
+
+// variables
+$white: #FFF;
+$black: #000;
+
+// variables
+
+// general
+body {
+  font-family: 'SF Pro Display', sans-serif;
+  &.no-scroll {
+    overflow: hidden;
+  }
+}
+
+.btn.focus, button:focus, .form-control:focus{
+  outline: 0;
+  box-shadow: none;
+}
+.transition{
+  -webkit-transition: all 0.5s;
+  -moz-transition:  all 0.5s;
+  -ms-transition:  all 0.5s;
+  -o-transition:  all 0.5s;
+  transition:  all 0.5s;
+}
+a, .button {
+  @extend .transition;
+}
+h1 {
+  @media (max-width: 767px) {
+    font-size: 26px !important;
+  }
+}
+
+// /general
+.maxwidt{
+  max-width: 1400px;
+}
+// navbar
+
+//threejs css
+#info {
+  color: #ffffff;
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  display: none;
+
+}
+#Animation{
+  position: fixed;
+  top: 0;
+  z-index: -1;
+}
+// threejs css
+
+.HomeNavBar{
+  background: #000;
+  .navbar-toggler{
+    i{
+      font-size: 27px;
+      color: #fff;
+    }
+  }
+  .navbar-brand{
+    img{
+      width: 121px;
+      height: 44px;
+      transform: none !important;
+    }
+  }
+  .navbar-nav{
+    li{
+
+      @media (min-width: 992px) {
+        padding-right: 1rem !important;
+        padding-left: 1rem !important;
+      }
+      a{
+        color:#fff !important;
+        font-size: 14px;
+        font-weight: 100;
+        position: relative;
+        @extend .transition;
+
+        &:hover{
+          opacity: 0.8;
+
+          &:before{
+            content: "";
+            border-bottom: 2px solid $white;
+            position: absolute;
+            top: 30px;
+            display: block;
+            width: 100%;
+            left: 0;
+            @media (max-width: 991px) {
+              top: 35px;
+            }
+          }
+        }
+        &:active{
+          opacity: 0.8;
+        }
+      }
+    }
+    li.active{
+      a{
+        color:#fff !important;
+        font-size: 14px;
+        font-weight: 100;
+        position: relative;
+        @extend .transition;
+
+        &:before{
+          content: "";
+          border-bottom: 2px solid $white;
+          position: absolute;
+          top: 30px;
+          display: block;
+          width: 100%;
+          left: 0;
+          @media (max-width: 991px) {
+            top: 35px;
+          }
+        }
+      }
+    }
+    .dropArrow{
+      position: relative;
+      &:before {
+        position: absolute;
+        top: 12px;
+        right: 15px;
+        content: "";
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        border-right: 0.1em solid #fff;
+        border-top: 0.1em solid #fff;
+        transform: rotate(135deg);
+      }
+      .dropdown{
+        background-color: transparent;
+        color: $white;
+        border: none;
+        padding: 0;
+        font-weight: 100;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-repeat: no-repeat;
+        background-position: right center;
+        background: none;
+        width: 100%;
+        padding-right: 15px;
+
+        &:focus{
+          outline: none;
+          -webkit-box-shadow: none ;
+          -moz-box-shadow: none ;
+          box-shadow: none;
+        }
+      }
+    }
+
+  }
+}
+
+.About{
+  color:#fff;
+
+}

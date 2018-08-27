@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="description" content="I">
+        <meta name="author" content="">
+        <meta name="keywords" content="">
+        <!-- open graph metas -->
+        <!-- open graph metas -->
+        <title>Home</title>
+        <!-- stylesheets -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/owl.carousel.min.css">
+        <link rel="stylesheet" href="css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="css/animate.css">
+        <link rel="stylesheet" href="css/account-main-page.css">
+        <link rel="stylesheet" href="css/3dCube.css">
+        <!-- /stylesheets -->
+    </head>
+
+    <body>
+
+        <!-- header -->
+        <header>
+            <div class="layerrectangle"></div>
+            <!-- Navigation -->
+            <nav class="navbar navbar-expand-lg navbar-dark fixed-top HomeNavBar" id="mainNav">
+                <div class="container maxwidt">
+                    <a class="navbar-brand js-scroll-trigger" href="account_main_page.html"><img src="Images/logo.png" alt="logo"></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarResponsive">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link js-scroll-trigger" href="about.html">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link js-scroll-trigger" href="Team.html">Team</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+                            </li>
+                            <li class="nav-item dropArrow">
+                                <select class="custom-select mb-2 mr-sm-2 mb-sm-0 dropdown" id="inlineFormCustomSelect">
+                                    <option selected>en</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!-- /header -->
+        <div class="container maxwidt">
+            <div class="row">
+                <div class="content">
+                   <div class="animated slideInLeft col-xs-12 col leftSection">
+                       <div class="pretitle">
+                           <p>PRETITLE</p>
+                           <hr>
+                       </div>
+                       <div class="title">
+                           <p>Achievements</p>
+                           <p>or another a word</p>
+                       </div>
+                       <div class="disqription">
+                           <p>Throughout the process, the staff did an extremely good job of communicating and did not hesitate to make changes when they were needed. The produced a product that surpassed my expectations and I would highly recommend them to anyone in need of a video to showcase.</p>
+                       </div>
+                        <div class="social">
+                            <i class="fa fa-facebook-f"></i>
+                            <i class="fa fa-twitter"></i>
+                            <i class="fa fa-linkedin"></i>
+                            <i class="fa fa-instagram"></i>
+                        </div>
+                    </div>
+                    <div class="col d-none d-lg-block"></div>
+                   <div class="animated slideInRight col col-xs-12  rightSection">
+                        <div class="firstsection col col-md-12 col-xs-12">
+                            <div class="pretitle">
+                                <p>01</p>
+                                <hr>
+                            </div>
+                            <div class="title">
+                                <p>Full cycle</p>
+                                <p>production</p>
+                            </div>
+                            <div class="disqription">
+                                <p>Suspendisse non ipsum ante. In hac habitasse platea dictumst. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+                            </div>
+                        </div>
+                        <div class="firstsection col col-md-12 col-xs-12">
+                            <div class="pretitle">
+                                <p>02</p>
+                                <hr>
+                            </div>
+                            <div class="title">
+                                <p>Title about</p>
+                                <p>support</p>
+                            </div>
+                            <div class="disqription">
+                                <p>Pellentesque egestas suscipit vestibulum. Nam maximus ante ut nibh dapibus lobortis. Etiam porta sed lacus ac maximus. Mauris ut turpis interdum.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+           <span class="layer-stand-a"></span>
+           <div class="box">
+               <span class="layer-a"></span>
+               <span class="layer-a"></span>
+               <span class="layer-a"></span>
+               <span class="layer-a"></span>
+               <span class="layer-a"></span>
+               <span class="layer-a"></span>
+           </div>
+
+        <!-- js -->
+        <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+        <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+        <script>
+        // onScroll Function
+
+        // $(document).ready(function () {
+        //   $(window).scroll(function () {
+        //     alert("Scrolled!");
+        //   });
+        // });
+
+        // onScroll Function
+
+
+          //Throttle:
+          var throttleOn = false;
+          var actionLock = false;
+          var throttleTimer = 100;
+
+          function throttle(e){
+            if(throttleOn){
+              actionLock = true;
+            };
+            if(!actionLock){
+              throttleOn = true;
+              setTimeout(function(){
+                throttleOn = false;
+              }, throttleTimer);
+              translate(e);
+            };
+            actionLock = false;
+          };
+
+          //Tracking:
+          var threshold = 20;
+          var box = $(".box");
+
+          function translate(e){
+            var xOrigin = box.width() / 2;
+            var yOrigin = box.height() / 2;
+            var xPivot = (e.clientY - yOrigin) / yOrigin * -threshold;
+            var yPivot = (e.clientX - xOrigin) / xOrigin * threshold;
+            box.css({
+              'transform': 'translate(-50%, -100%) rotateX('+xPivot+'deg) rotateY('+yPivot+'deg)'
+            });
+          };
+
+          //Handler:
+          $(window).mousemove(function(e){
+            throttle(e);
+          });
+        </script>
+        <script type="text/javascript">
+
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-36251023-1']);
+          _gaq.push(['_setDomainName', 'jqueryscript.net']);
+          _gaq.push(['_trackPageview']);
+
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+
+        </script>
+
+    </body>
+
+</html>
